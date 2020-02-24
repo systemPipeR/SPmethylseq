@@ -1,0 +1,17 @@
+## Parameter file for samtools
+## Values in <...> reference column titles in targets file
+PairSet	Name	Value
+modules	NA	samtools
+software	NA	samtools
+cores	NA	NA
+other	NA	sort
+reference	NA	NA
+outfile1	-o	<FileName1>
+outfile1	path	./results/
+outfile1	remove	.bam
+outfile1	append	.sorted.bam
+outfile1	outextension	.bam
+infile1	NA	<FileName1>
+infile1	path	NA
+infile2	NA	<FileName2>
+infile2	path	NA

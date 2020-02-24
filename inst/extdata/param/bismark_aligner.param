@@ -1,0 +1,19 @@
+## Parameter file for Bismark
+## Values in <...> reference column titles in targets file
+PairSet	Name	Value
+modules	NA	bismark
+modules	NA	bowtie2
+modules	NA	samtools
+software	NA	bismark
+cores	NA	NA
+other	NA	--bowtie2 -N 0 -L 20 ./data/
+reference	NA	NA
+infile1	NA	<FileName1>
+infile1	path	NA
+infile2	NA	<FileName2>
+infile2	path	NA
+outfile1	-o	<FileName1>
+outfile1	path	./results/
+outfile1	remove	NA
+outfile1	append	.out
+outfile1	outextension	.out

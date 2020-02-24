@@ -1,0 +1,4 @@
+name: systemPipeMethylseq
+description: >
+   systemPipeMethylseq
+create_dir: true

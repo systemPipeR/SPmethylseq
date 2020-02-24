@@ -1,0 +1,19 @@
+## Parameter file for Bismark
+## Values in <...> reference column titles in targets file
+PairSet	Name	Value
+modules	NA	bismark
+modules	NA	bowtie2
+modules	NA	samtools
+software	NA	bismark_methylation_extractor
+cores	NA	NA
+other	NA	--gzip -s --report --bedGraph --counts --buffer_size 5G --cytosine_report --genome_folder ./data/
+reference	NA	NA
+outfile1	-o	<FileName1>
+outfile1	path	./results/
+outfile1	remove	NA
+outfile1	append	.methyl.extractor
+outfile1	outextension	.methyl.extractor/
+infile1	NA	<FileName1>
+infile1	path	NA
+infile2	NA	<FileName2>
+infile2	path	NA
