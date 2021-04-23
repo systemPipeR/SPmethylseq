@@ -28,7 +28,7 @@ word-wrap: initial !important;
 ```
 <!--
 ## Compile from command-line
-Rscript -e "rmarkdown::render('systemPipeMethylseq.Rmd', c('BiocStyle::html_document'), clean=F); knitr::knit('systemPipeMethylseq.Rmd', tangle=TRUE)"; Rscript ../md2jekyll.R systemPipeMethylseq.knit.md 2; Rscript -e "rmarkdown::render('systemPipeMethylseq.Rmd', c('BiocStyle::pdf_document'))" -->
+Rscript -e "rmarkdown::render('SPmethylseq.Rmd', c('BiocStyle::html_document'), clean=TRUE)" -->
 
 ```{r style, echo = FALSE, results = 'asis'}
 BiocStyle::markdown()
@@ -42,15 +42,6 @@ knitr::opts_chunk$set(
 ```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
 suppressPackageStartupMessages({
     library(systemPipeR)
-    library(batchtools)
-    library(BiocParallel)
-    library(Biostrings)
-    library(Rsamtools)
-    library(GenomicRanges)
-    library(ggplot2)
-    library(GenomicAlignments)
-    library(ShortRead)
-    library(ape)
 })
 ```
 
@@ -71,7 +62,7 @@ Typically, the user wants to record here the sources and versions of the
 reference genome sequence along with the corresponding annotations. In
 the provided sample data set all data inputs are stored in a `data`
 subdirectory and all results will be written to a separate `results` directory,
-while the `systemPipeMethylseq.Rmd` script and the `targets` file are expected to be located in the parent
+while the `SPmethylseq.Rmd` script and the `targets` file are expected to be located in the parent
 directory. The R session is expected to run from this parent directory.
 
 The chosen data set [SRP097911](https://www.ncbi.nlm.nih.gov/sra/?term=SRP097911)
@@ -89,11 +80,11 @@ additional NGS applications will be provided in the future.
 
 ```{r genRna_workflow, eval=FALSE}
 library(systemPipeRdata)
-genWorkenvir(workflow=NULL, package_repo="systemPipeR/systemPipeMethylseq")
-setwd("systemPipeMethylseq")
+genWorkenvir(workflow=NULL, package_repo="systemPipeR/SPmethylseq")
+setwd("SPmethylseq")
 ```
 
-Now open the R markdown script `systemPipeMethylseq.Rmd`in your R IDE (_e.g._ vim-r or RStudio) and 
+Now open the R markdown script `SPmethylseq.Rmd`in your R IDE (_e.g._ vim-r or RStudio) and 
 run the workflow as outlined below. 
 
 ## Required packages and resources

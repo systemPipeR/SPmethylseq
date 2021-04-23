@@ -1,9 +1,10 @@
-pandoc: '2.5'
-pkgdown: 1.5.1
+pandoc: '2.13'
+pkgdown: 1.6.1
 pkgdown_sha: ~
-articles: []
-last_built: 2020-04-30T04:19Z
+articles:
+  SPmethylseq: SPmethylseq.html
+last_built: 2021-04-23T06:31Z
 urls:
-  reference: http://girke.bioinformatics.ucr.edu/systemPipeR//reference
-  article: http://girke.bioinformatics.ucr.edu/systemPipeR//articles
+  reference: https://systempipe.org/SPmethylseq/reference
+  article: https://systempipe.org/SPmethylseq/articles
 
