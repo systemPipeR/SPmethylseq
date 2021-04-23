@@ -1,5 +1,5 @@
 #!/bin/bash
-if [[ -n "$1" ]]; then
+if [ -n "$1" ]; then
 	dt=$1
 else
 	dt=$(date '+%d/%m/%Y %H:%M:%S')
