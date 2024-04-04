@@ -12,12 +12,6 @@
 
 ### Installation
 
-To install the package, please use the _`BiocManager::install`_ command:
-```
-if (!requireNamespace("BiocManager", quietly=TRUE))
-    install.packages("BiocManager")
-BiocManager::install("systemPipeR/SPmethylseq", build_vignettes=TRUE, dependencies=TRUE)
-```
 To obtain the *systemPipeR* and *systemPipeRdata*, please run as follow:
 ```
 if (!requireNamespace("BiocManager", quietly=TRUE))
@@ -26,3 +20,22 @@ BiocManager::install("systemPipeR")
 BiocManager::install("systemPipeRdata")
 ```
 
+### Usage
+
+To test workflows quickly or design new ones from existing templates, users can
+generate with a single command workflow instances fully populated with sample data 
+and parameter files required for running a chosen workflow.
+
+Use `git` or `git-bash.exe` (Windows) to download the template and run 
+
+```
+git clone https://github.com/systemPipeR/SPmethylseq.git
+cd SPmethylseq
+```
+
+To init the workflow management instance, run
+```r
+library("systemPipeR")
+sal <- SPRproject()
+sal <- importWF(sal, file_path = "SPmethylseq.Rmd")
+```
